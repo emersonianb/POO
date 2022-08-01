@@ -1,4 +1,3 @@
-#include "Carrinho.h"
 #include <iostream>
 
 using std::cout;
@@ -6,7 +5,7 @@ using std::cout;
 void Carrinho::armazenarProduto(Produto &pro){
   if (numProdutos < 30){
     produtos[numProdutos] = pro;
-    numProdutos += 1;
+    numProdutos+= 1;
   }
 }
 
@@ -16,14 +15,18 @@ void Carrinho::removerProduto(string nome){
       Produto pro;
       produtos[i] = pro;
       numProdutos -= 1;
-      for (int j = i; i < numProdutos; i++){
-          produtos[i] = produtos[i+1];
-        }
+      for (int j = 0; j < numProdutos; j++){
+          if (produtos[j].getNome() == ""){
+            produtos[j] = produtos[j+1];
+            produtos[j+1] = pro;
+          }
       }
     }
   }
+}
 
 void Carrinho::listarProdutos() const{
+  cout << "---------Lista------------\n";
   for (int i = 0; i <= numProdutos; i++){
     if (produtos[i].getNome() != ""){
       cout << "Produto: " << produtos[i].getNome() << std::endl;
@@ -32,4 +35,5 @@ void Carrinho::listarProdutos() const{
       cout << "_________________________" << std::endl;
     }
   }
+  cout << std::endl;
 }
