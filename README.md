@@ -1,6 +1,6 @@
 # POO
 
-<p> <h2> Repositório criado para compartilhar as atividades para a cadeira de Programação Orientada a Objetos </h2> </p> <br>
+<p> <h2> Repositório criado para compartilhar as atividades desenvolvidas para a cadeira de Programação Orientada a Objetos </h2> </p> <br>
 <hr>
 <table align="center">
   <tr>
